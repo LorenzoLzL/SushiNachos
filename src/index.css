@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Syne", sans-serif;
+  
+  --color-obsidian: #080808;
+  --color-mexico: #FF0055;
+  --color-japan: #00FFCC;
+  --color-tequila: #FFD700;
+}
+
+@layer base {
+  body {
+    @apply bg-obsidian text-white selection:bg-mexico selection:text-white cursor-none;
+    overflow-x: hidden;
+  }
+}
+
+@layer utilities {
+  .text-glow-mexico {
+    text-shadow: 0 0 15px rgba(255, 0, 85, 0.5);
+  }
+  .text-glow-japan {
+    text-shadow: 0 0 15px rgba(0, 255, 204, 0.5);
+  }
+  .mesh-gradient {
+    background-color: #080808;
+    background-image: 
+      radial-gradient(at 0% 0%, rgba(255, 0, 85, 0.2) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, rgba(0, 255, 204, 0.15) 0px, transparent 50%),
+      radial-gradient(at 50% 100%, rgba(255, 215, 0, 0.1) 0px, transparent 50%);
+  }
+  .glass {
+    @apply backdrop-blur-md bg-white/5 border-white/10;
+  }
+  .glass-card {
+    @apply backdrop-blur-sm bg-white/5 border border-white/10 rounded-2xl;
+  }
+}
+
+/* Custom Hide Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-obsidian;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-mexico/30 rounded-full hover:bg-mexico/50 transition-colors;
+}
