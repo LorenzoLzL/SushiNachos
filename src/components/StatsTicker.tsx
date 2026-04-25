@@ -19,7 +19,7 @@ export default function StatsTicker() {
           repeat: Infinity, 
           ease: "linear" 
         }}
-        className="flex gap-20 items-center"
+        className="flex gap-20 items-center will-change-transform"
       >
         {[...stats, ...stats].map((stat, i) => (
           <div key={i} className="flex gap-20 items-center">

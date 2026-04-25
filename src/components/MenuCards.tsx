@@ -14,7 +14,7 @@ function MenuCard({ title, desc, img, color }: { title: string, desc: string, im
   const rotateY = useTransform(mouseXSpring, [-0.5, 0.5], ["-17.5deg", "17.5deg"]);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (!ref.current) return;
+    if (!ref.current || window.innerWidth < 1024) return;
     const rect = ref.current.getBoundingClientRect();
     const width = rect.width;
     const height = rect.height;

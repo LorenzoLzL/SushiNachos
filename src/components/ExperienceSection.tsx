@@ -6,7 +6,7 @@ export default function ExperienceSection() {
       title: "Ambiente Temático",
       desc: "Um ambiente vibrante e acolhedor, onde cores, luzes e cultura se misturam para criar uma experiência descontraída e cheia de personalidade.",
       color: "border-mexico",
-      img: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=2074&auto=format&fit=crop"
+      img: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1000&q=70&auto=format&fit=crop"
     },
     {
       title: "Coquetéis Autorais",
@@ -18,7 +18,7 @@ export default function ExperienceSection() {
       title: "Happy Hour Vibrante",
       desc: "A melhor vibe de Gravatá, todos os dias.",
       color: "border-tequila",
-      img: "https://images.unsplash.com/photo-1547595628-c61a29f496f0?q=80&w=1974&auto=format&fit=crop"
+      img: "https://images.unsplash.com/photo-1547595628-c61a29f496f0?w=1000&q=70&auto=format&fit=crop"
     }
   ];
 

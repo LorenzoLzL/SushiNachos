@@ -5,18 +5,27 @@ export default function CustomCursor() {
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
   const [isHovering, setIsHovering] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   const springConfig = { damping: 25, stiffness: 300 };
   const cursorX = useSpring(mouseX, springConfig);
   const cursorY = useSpring(mouseY, springConfig);
 
   useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 1024 || ('ontouchstart' in window));
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+
     const handleMouseMove = (e: MouseEvent) => {
+      if (isMobile) return;
       mouseX.set(e.clientX);
       mouseY.set(e.clientY);
     };
 
     const handleMouseOver = (e: MouseEvent) => {
+      if (isMobile) return;
       if ((e.target as HTMLElement).closest('button, a, .interactive')) {
         setIsHovering(true);
       } else {
@@ -31,6 +40,8 @@ export default function CustomCursor() {
       window.removeEventListener('mouseover', handleMouseOver);
     };
   }, [mouseX, mouseY]);
+
+  if (isMobile) return null;
 
   return (
     <>

@@ -33,7 +33,7 @@ export default function Hero() {
         className="absolute bottom-1/4 -right-10 w-80 h-80 bg-japan/10 blur-[100px] rounded-full" 
       />
 
-      <motion.div style={{ opacity, scale }} className="relative z-10 text-center px-6 mt-16 md:mt-0">
+      <motion.div style={{ opacity, scale }} className="relative z-10 text-center px-6 mt-16 md:mt-0 will-change-[opacity,transform]">
         <div className="inline-block px-3 py-1 bg-mexico/20 text-mexico text-[10px] md:text-xs font-bold tracking-[0.25em] uppercase rounded-sm mb-8 border border-mexico/30">
           Navegantes • GravatÁ • 10 Anos
         </div>
