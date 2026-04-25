@@ -55,7 +55,7 @@ export default function ContactFooter() {
 
         <div className="flex flex-col md:flex-row justify-between items-center pt-10 border-t border-white/5 gap-6">
           <p className="text-white/20 text-xs font-medium uppercase tracking-widest">
-            © 2024 SushiNachos - Uma Obra de Arte da <span className="text-white/40">Vibe Studio</span>.
+            © 2024 SushiNachos
           </p>
           <div className="flex gap-8 text-[10px] font-bold uppercase tracking-widest text-white/20">
             <a href="#" className="hover:text-white transition-colors">Privacy</a>
