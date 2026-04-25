@@ -8,21 +8,19 @@ export default function Hero() {
     offset: ["start start", "end start"]
   });
 
-  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
-  const scale = useTransform(scrollYProgress, [0, 0.5], [1, 0.8]);
-  const y = useTransform(scrollYProgress, [0, 0.5], [0, 50]);
-  const controlledY = useTransform(scrollYProgress, [0, 0.5], [0, 0]); // Disable Y on mobile if needed, but let's just use it globally for now or refine
+  const opacity = useTransform(scrollYProgress, [0, 0.4], [1, 0]);
+  const scale = useTransform(scrollYProgress, [0, 0.4], [1, 0.9]);
 
   return (
     <section ref={targetRef} className="relative min-h-screen md:h-screen flex items-center justify-center overflow-hidden mesh-gradient py-20 md:py-0">
-      {/* Background Floating Elements */}
+      {/* Background Floating Elements - Reduced blur for mobile performance */}
       <motion.div 
         animate={{ 
           y: [0, -20, 0],
           rotate: [0, 5, 0]
         }}
         transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-1/4 -left-10 w-64 h-64 bg-mexico/10 blur-[100px] rounded-full" 
+        className="absolute top-1/4 -left-10 w-64 h-64 bg-mexico/10 blur-[60px] md:blur-[100px] rounded-full lg:block hidden" 
       />
       <motion.div 
         animate={{ 
@@ -30,7 +28,7 @@ export default function Hero() {
           rotate: [0, -5, 0]
         }}
         transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute bottom-1/4 -right-10 w-80 h-80 bg-japan/10 blur-[100px] rounded-full" 
+        className="absolute bottom-1/4 -right-10 w-80 h-80 bg-japan/10 blur-[60px] md:blur-[100px] rounded-full lg:block hidden" 
       />
 
       <motion.div style={{ opacity, scale }} className="relative z-10 text-center px-6 mt-16 md:mt-0 will-change-[opacity,transform]">
