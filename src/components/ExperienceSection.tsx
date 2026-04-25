@@ -23,16 +23,16 @@ export default function ExperienceSection() {
   ];
 
   return (
-    <section id="experience" className="py-32 px-6 max-w-7xl mx-auto">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-start">
+    <section id="experience" className="py-20 md:py-32 px-6 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="font-display text-4xl md:text-7xl font-black mb-8 md:mb-10 tracking-tighter leading-tight">
-            NÃO É APENAS COMIDA, É UM <span className="text-glow-mexico text-mexico">CHOQUE</span> CULTURAL.
+          <h2 className="font-display text-4xl md:text-5xl lg:text-7xl font-black mb-8 md:mb-10 tracking-tighter leading-tight uppercase">
+            Não é apenas comida, é um <span className="text-glow-mexico text-mexico">choque</span> cultural.
           </h2>
           <p className="font-sans text-lg md:text-xl text-white/60 mb-10 md:mb-12 max-w-md leading-relaxed">
             Nascido da colisão entre o minimalismo zen japonês e o maximalismo vibrante mexicano, o SushiNachos redefine a experiência gastronômica.
@@ -55,7 +55,7 @@ export default function ExperienceSection() {
           </div>
         </motion.div>
 
-        <div className="relative mt-20 md:mt-0">
+        <div className="relative mt-12 lg:mt-0">
           <motion.div
             initial={{ scale: 0.9, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}

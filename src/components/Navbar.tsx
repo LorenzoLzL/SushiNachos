@@ -15,7 +15,7 @@ export default function Navbar() {
           </span>
         </div>
 
-        <div className="hidden md:flex gap-10 text-sm font-semibold tracking-widest uppercase text-white/70">
+        <div className="hidden lg:flex gap-10 text-sm font-semibold tracking-widest uppercase text-white/70">
           <a href="#experience" className="hover:text-japan transition-colors interactive">Experiência</a>
           <a href="#menu" className="hover:text-mexico transition-colors interactive">Cardápio</a>
           <a href="#location" className="hover:text-tequila transition-colors interactive">Localização</a>

@@ -53,10 +53,9 @@ function MenuCard({ title, desc, img, color }: { title: string, desc: string, im
 
       <div 
         style={{ transform: "translateZ(100px)" }}
-        className="absolute bottom-10 left-10 right-10"
+        className="absolute bottom-6 left-6 right-6 lg:bottom-10 lg:left-10 lg:right-10 whitespace-normal"
       >
-        <h3 className={`font-display text-2xl font-black uppercase tracking-tight mb-2 ${color}`}>{title}</h3>
-        <p className="text-white/40 text-xs leading-relaxed uppercase tracking-widest">{desc}</p>
+        <h3 className={`font-display text-xl lg:text-2xl font-black uppercase tracking-tight ${color}`}>{title}</h3>
       </div>
 
       <div className={`absolute top-10 right-10 w-10 h-10 rounded-full border border-white/20 flex items-center justify-center group-hover:${color} transition-colors glass`}>
@@ -91,10 +90,10 @@ export default function MenuCards() {
   return (
     <section id="menu" className="py-32 px-6">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
-          <div className="max-w-xl text-center md:text-left">
+        <div className="flex flex-col lg:flex-row justify-between items-center lg:items-end mb-20 gap-8">
+          <div className="max-w-xl text-center lg:text-left">
             <span className="text-mexico font-bold tracking-[0.2em] text-xs uppercase mb-4 block">Manifesto de Sabor</span>
-            <h2 className="font-display text-3xl md:text-6xl font-black tracking-tighter">
+            <h2 className="font-display text-3xl md:text-5xl lg:text-6xl font-black tracking-tighter">
               A FUSÃO QUE <span className="italic text-japan">DESAFIA</span> A LÓGICA.
             </h2>
           </div>
@@ -111,7 +110,7 @@ export default function MenuCards() {
           </a>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
           {items.map((item, i) => (
             <motion.div
               key={i}
