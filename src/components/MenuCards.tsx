@@ -47,7 +47,7 @@ function MenuCard({ title, desc, img, color }: { title: string, desc: string, im
         style={{ transform: "translateZ(75px)", transformStyle: "preserve-3d" }}
         className="absolute inset-4 rounded-[1.5rem] overflow-hidden"
       >
-        <img src={img} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-125 group-hover:scale-100 opacity-80" />
+        <img src={img} className="w-full h-full object-cover md:grayscale md:group-hover:grayscale-0 transition-all duration-700 md:scale-125 md:group-hover:scale-100 opacity-80" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent" />
       </div>
 
@@ -92,9 +92,9 @@ export default function MenuCards() {
     <section id="menu" className="py-32 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
-          <div className="max-w-xl">
+          <div className="max-w-xl text-center md:text-left">
             <span className="text-mexico font-bold tracking-[0.2em] text-xs uppercase mb-4 block">Manifesto de Sabor</span>
-            <h2 className="font-display text-4xl md:text-6xl font-black tracking-tighter">
+            <h2 className="font-display text-3xl md:text-6xl font-black tracking-tighter">
               A FUSÃO QUE <span className="italic text-japan">DESAFIA</span> A LÓGICA.
             </h2>
           </div>

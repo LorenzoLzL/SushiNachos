@@ -31,10 +31,10 @@ export default function ExperienceSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="font-display text-5xl md:text-7xl font-black mb-10 tracking-tighter leading-tight">
+          <h2 className="font-display text-4xl md:text-7xl font-black mb-8 md:mb-10 tracking-tighter leading-tight">
             NÃO É APENAS COMIDA, É UM <span className="text-glow-mexico text-mexico">CHOQUE</span> CULTURAL.
           </h2>
-          <p className="font-sans text-xl text-white/60 mb-12 max-w-md leading-relaxed">
+          <p className="font-sans text-lg md:text-xl text-white/60 mb-10 md:mb-12 max-w-md leading-relaxed">
             Nascido da colisão entre o minimalismo zen japonês e o maximalismo vibrante mexicano, o SushiNachos redefine a experiência gastronômica.
           </p>
           
@@ -66,7 +66,7 @@ export default function ExperienceSection() {
             <img 
               src="https://lh3.googleusercontent.com/u/0/d/1J5V-8BkyB0b03Hm75jtMcqLXhr_l7qF-" 
               alt="Japanese Mexican Fusion" 
-              className="w-full h-full object-cover scale-110 hover:scale-100 transition-transform duration-1000 grayscale hover:grayscale-0"
+              className="w-full h-full object-cover md:scale-110 md:hover:scale-100 transition-transform duration-1000 md:grayscale md:hover:grayscale-0"
             />
           </motion.div>
           

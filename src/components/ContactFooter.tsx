@@ -37,7 +37,7 @@ export default function ContactFooter() {
             <img 
               src="https://lh3.googleusercontent.com/u/0/d/17kJpvKBmn_8J7CKcidpU2x6L5x4XjG57" 
               alt="Restaurant Interior" 
-              className="w-full h-full object-cover grayscale brightness-50 group-hover:grayscale-0 group-hover:scale-110 transition-all duration-1000"
+              className="w-full h-full object-cover md:grayscale md:brightness-50 md:group-hover:grayscale-0 md:group-hover:scale-110 transition-all duration-1000"
             />
             <div className="absolute inset-0 flex items-center justify-center z-20">
               <motion.a 

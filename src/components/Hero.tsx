@@ -34,12 +34,12 @@ export default function Hero() {
         className="absolute bottom-1/4 -right-10 w-80 h-80 bg-japan/10 blur-[100px] rounded-full" 
       />
 
-      <motion.div style={{ opacity, scale, y }} className="relative z-10 text-center px-6">
+      <motion.div style={{ opacity, scale, y }} className="relative z-10 text-center px-6 mt-20 md:mt-0">
         <div className="inline-block px-3 py-1 bg-mexico/20 text-mexico text-[10px] md:text-xs font-bold tracking-[0.25em] uppercase rounded-sm mb-8 border border-mexico/30">
           Navegantes • GravatÁ • 10 Anos
         </div>
         
-        <h1 className="font-display text-6xl md:text-8xl font-extrabold mb-8 uppercase leading-[0.9] tracking-tighter">
+        <h1 className="font-display text-4xl sm:text-5xl md:text-8xl font-extrabold mb-12 md:mb-8 uppercase leading-[0.9] tracking-tighter">
           Onde o Sol <br/>
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-mexico to-tequila">Nascente</span> <br/>
           encontra a <span className="italic font-light text-japan">Fiesta.</span>
@@ -48,8 +48,8 @@ export default function Hero() {
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 1, duration: 1 }}
-          className="font-sans text-white/60 text-lg md:text-xl max-w-lg mx-auto mb-12 leading-relaxed"
+          transition={{ delay: 1.2, duration: 1 }}
+          className="font-sans text-white/60 text-base md:text-xl max-w-lg mx-auto mb-16 md:mb-12 leading-relaxed"
         >
           Há 10 anos, a fusão mais audaciosa de Gravatá. <br />
           <span className="text-white">Sushi criativo & Nachos explosivos</span> em <span className="text-tequila font-semibold">uma experiência incrível</span>.
@@ -77,17 +77,17 @@ export default function Hero() {
         src="https://lh3.googleusercontent.com/u/0/d/1FPGA7SHZ27W6lCDV4bMg8Ev9uELAGuly" 
         alt="Modern Sushi"
         initial={{ scale: 0.8, opacity: 0, rotate: -10 }}
-        animate={{ scale: 1, opacity: 0.3, rotate: -20 }}
+        animate={{ scale: 1, opacity: 0.2, rotate: -20 }}
         transition={{ duration: 1.5, ease: "easeOut" }}
-        className="absolute -bottom-20 -left-20 w-1/2 max-w-lg pointer-events-none grayscale hover:grayscale-0 transition-all duration-700"
+        className="absolute -bottom-10 -left-20 w-3/4 md:w-1/2 max-w-lg pointer-events-none md:grayscale md:hover:grayscale-0 transition-all duration-700 md:opacity-30"
       />
       <motion.img 
         src="https://lh3.googleusercontent.com/u/0/d/1-rsi0D7NDTixyqwb8-EsRYoAY0mHoTGG" 
         alt="Gourmet Nachos"
         initial={{ scale: 0.8, opacity: 0, rotate: 10 }}
-        animate={{ scale: 1, opacity: 0.3, rotate: 25 }}
+        animate={{ scale: 1, opacity: 0.2, rotate: 25 }}
         transition={{ duration: 1.5, ease: "easeOut", delay: 0.2 }}
-        className="absolute -top-20 -right-20 w-1/2 max-w-lg pointer-events-none grayscale hover:grayscale-0 transition-all duration-700"
+        className="absolute -top-10 -right-20 w-3/4 md:w-1/2 max-w-lg pointer-events-none md:grayscale md:hover:grayscale-0 transition-all duration-700 md:opacity-30"
       />
     </section>
   );
