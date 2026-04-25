@@ -1,5 +1,5 @@
 import { motion, useScroll, useTransform } from 'motion/react';
-import { useRef } from 'react';
+import { useRef, useState, useEffect } from 'react';
 
 export default function Hero() {
   const targetRef = useRef(null);
@@ -7,6 +7,15 @@ export default function Hero() {
     target: targetRef,
     offset: ["start start", "end start"]
   });
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   const opacity = useTransform(scrollYProgress, [0, 0.4], [1, 0]);
   const scale = useTransform(scrollYProgress, [0, 0.4], [1, 0.9]);
@@ -20,7 +29,7 @@ export default function Hero() {
           rotate: [0, 5, 0]
         }}
         transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-1/4 -left-10 w-64 h-64 bg-mexico/10 blur-[60px] md:blur-[100px] rounded-full lg:block hidden" 
+        className="absolute top-1/4 -left-10 w-64 h-64 bg-mexico/30 blur-[60px] md:blur-[100px] rounded-full" 
       />
       <motion.div 
         animate={{ 
@@ -28,10 +37,16 @@ export default function Hero() {
           rotate: [0, -5, 0]
         }}
         transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute bottom-1/4 -right-10 w-80 h-80 bg-japan/10 blur-[60px] md:blur-[100px] rounded-full lg:block hidden" 
+        className="absolute bottom-1/4 -right-10 w-80 h-80 bg-japan/20 blur-[60px] md:blur-[100px] rounded-full" 
       />
 
-      <motion.div style={{ opacity, scale }} className="relative z-10 text-center px-6 mt-16 md:mt-0 will-change-[opacity,transform]">
+      <motion.div 
+        style={{ 
+          opacity: isMobile ? 1 : opacity, 
+          scale: isMobile ? 1 : scale 
+        }} 
+        className="relative z-10 text-center px-6 mt-16 md:mt-0 will-change-[opacity,transform]"
+      >
         <div className="inline-block px-3 py-1 bg-mexico/20 text-mexico text-[10px] md:text-xs font-bold tracking-[0.25em] uppercase rounded-sm mb-8 border border-mexico/30">
           Navegantes • GravatÁ • 10 Anos
         </div>
