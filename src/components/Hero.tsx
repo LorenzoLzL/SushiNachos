@@ -10,7 +10,7 @@ export default function Hero() {
 
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
   const scale = useTransform(scrollYProgress, [0, 0.5], [1, 0.8]);
-  const y = useTransform(scrollYProgress, [0, 0.5], [0, 100]);
+  const y = useTransform(scrollYProgress, [0, 0.5], [0, 50]);
 
   const words = "Onde o Sol Nascente encontra a Fiesta.".split(" ");
 
@@ -34,12 +34,12 @@ export default function Hero() {
         className="absolute bottom-1/4 -right-10 w-80 h-80 bg-japan/10 blur-[100px] rounded-full" 
       />
 
-      <motion.div style={{ opacity, scale, y }} className="relative z-10 text-center px-6 mt-20 md:mt-0">
+      <motion.div style={{ opacity, scale, y }} className="relative z-10 text-center px-6 mt-16 md:mt-0">
         <div className="inline-block px-3 py-1 bg-mexico/20 text-mexico text-[10px] md:text-xs font-bold tracking-[0.25em] uppercase rounded-sm mb-8 border border-mexico/30">
           Navegantes • GravatÁ • 10 Anos
         </div>
         
-        <h1 className="font-display text-4xl sm:text-5xl md:text-8xl font-extrabold mb-12 md:mb-8 uppercase leading-[0.9] tracking-tighter">
+        <h1 className="font-display text-4xl sm:text-5xl md:text-8xl font-extrabold mb-8 md:mb-8 uppercase leading-[0.9] tracking-tighter">
           Onde o Sol <br/>
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-mexico to-tequila">Nascente</span> <br/>
           encontra a <span className="italic font-light text-japan">Fiesta.</span>
